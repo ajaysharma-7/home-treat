@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/headlink.ejs') %>
+</head>
+<body>
+    <%- include('../partials/adminuserprofileheader.ejs') %>
+   <div class="deshboard-mid">
+    <div class="row">
+        <%- include('../partials/deshboard-link.ejs') %>
+        <div class="col-9">
+           <div class="user-heading">
+            <div class="row">
+                <div class="col-3">
+                   <p>Name</p> 
+                </div>
+                <div class="col-2">
+                    <p>Mobile</p> 
+                </div>
+                <div class="col-3">
+                    <p>Address</p> 
+                </div>
+                <div class="col-2">
+                    <p>Date</p> 
+                </div>
+                <div class="col-2">
+                    <p>Time</p> 
+                </div>
+                
+                
+            </div>
+           </div>
+           <div class="user-items">
+            <% allbooking.forEach(user => { %>
+            <div class="user-item">
+                <div class="row">
+                    <div class="col-3">
+                       <p><%= user.name %></p> 
+                    </div>
+                    <div class="col-2">
+                        <p><%= user.mobilenumber %></p> 
+                    </div>
+                    <div class="col-3">
+                        <p><%= user.address %></p> 
+                    </div>
+                    <div class="col-2">
+                        <p><%= user.date %></p> 
+                    </div>
+                    <div class="col-2">
+                        <p><%= user.time %></p> 
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+           </div>
+        </div>
+    </div>
+   </div>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/headlink.ejs') %>
+</head>
+<body>
+    <%- include('../partials/userheader.ejs') %>
+    <div class="login-register">
+        <div class="register-container">
+            <h1>Register a Account...!</h1>
+            <p><%=message%></p>
+            <form method="post">
+           
+                <div class="row">
+                    <div class="col-lg-12 col-xl-6">
+                        <label for=""><span>*</span>Email</label>
+                        <input type="email" name="email" required class="form-control" placeholder="Please Enter Your Email">
+                    </div>
+                    <div class="col-lg-12 col-xl-6">
+                        <label><span>*</span>Name</label>
+                        <input type="text" name="username" class="form-control" placeholder="Please Enter Your Name">
+                    </div>
+                    <div class="col-lg-12 col-xl-6">
+                        <label><span>*</span>Mobile Number</label>
+                        <input type="number" name="mobile" required class="form-control" placeholder="Please Enter Your Mobile Number">
+                    </div>
+                    <div class="col-lg-12 col-xl-6">
+                        <label><span>*</span>Password</label>
+                        <input type="password" name="password" required class="form-control" placeholder="Please Enter Your Password">
+                    </div>
+                    <div class="col-lg-12 col-xl-6">
+                        <label><span>*</span>Confirm Password</label>
+                        <input type="password" name="confirmpassword" required class="form-control" placeholder="Please Enter Confirm Password">
+                    </div>
+                   
+                    <!-- <div class="col-6">
+                        <label><span>*</span>Gender</label>
+                        <select class="form-select" name="gender">
+                            <option value="">Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-6">
+                        <label><span>*</span>What's Degree you Have?</label>
+                        <select class="form-select" name="degree">
+                            <option value="">Select</option>
+                            <option value="BSC Nursing">BSC Nursing</option>
+                            <option value="GNM">GNM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-6">
+                        <label><span>*</span>Are you Currently Working?</label>
+                        <select class="form-select" name="currently_working">
+                            <option value="">Select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-12">
+                        <label><span>*</span>Address 1</label>
+                        <input type="text" name="Address1" required class="form-control" placeholder="Please Enter Your Address">
+                    </div>
+                    <div class="col-12">
+                        <label>Address 2</label>
+                        <input type="text" name="Address2" class="form-control" placeholder="Please Enter Your Address">
+                    </div> -->
+                </div>
+               
+               
+                <button class="main-btn" type="submit">Create a Account</button>
+            </form>
+            <a href="/login" class="Forgot-password">login Here</a>
+        </div>
+    </div>
+    <%- include('../partials/book-popup.ejs') %>
+</body>
+</html>

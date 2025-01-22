@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/headlink.ejs') %>
+</head>
+<body>
+    <%- include('../partials/userheader.ejs') %>
+    <div class="login-register">
+
+        <div class="login-container">
+            <h1>Have a Account...!</h1>
+            <p><%=message%></p>
+            <form method="post">
+                <label for=""><span>*</span>Email</label>
+                <input type="email" name="email" required class="form-control" placeholder="Please Enter Your Email">
+                <label><span>*</span>Password</label>
+                <input type="password" name="password" required class="form-control" placeholder="Please Enter Your Password">
+                <button class="main-btn" type="submit">Login</button>
+               
+
+            </form>
+            <a href="/forgotpassword-email" class="Forgot-password">Forgot Password</a>
+            <a href="/register"><button class="secondary-btn">Create a Account</button></a>
+        </div>
+    </div>
+    <%- include('../partials/book-popup.ejs') %>
+</body>
+</html>

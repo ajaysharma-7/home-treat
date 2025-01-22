@@ -1,0 +1,47 @@
+<div class="overlay"></div>
+    <div class="book-popup">
+        <span id="cls-book-popup"><i class="fa-solid fa-xmark"></i></span>
+        <h2>Medical Services at Home</h2>
+        <p>Please enter your details and we will reach out to you as soon as we can.</p>
+        <form action="/booknow" method="post">
+            <div class="row">
+                <div class="col-6 mt-3">
+                    <label>Name <span>*</span></label>
+                    <input name="usename" type="text" class="form-control" placeholder="Enter Your name" required>
+                </div>
+                <div class="col-6  mt-3">
+                    <label>Mobile Number <span>*</span></label>
+                    <input name="mobilenumber" type="number" class="form-control" placeholder="Enter Your Mobile Number" required>
+                </div>
+                <div class="col-12  mt-3">
+                    <label>Your Jaipur Address <span>*</span></label>
+                    <input name="address" type="text"  class="form-control" placeholder="Enter Your Jaipur Address" required>
+                </div>
+                <div class="col-6  mt-3">
+                    <label>Date <span>*</span></label>
+                    <input name="date" type="date"  class="form-control" required>
+                </div>
+                <div class="col-6  mt-3">
+                    <label>Time <span>*</span></label>
+                    <input name="time" type="time"  class="form-control" required>
+                </div>
+            </div>
+            <button class="btn-standar">Submit</button>
+        </form>
+    </div>
+    <script>
+        let bookBtn = document.getElementsByClassName("btn-book"); 
+        let bookPopup = document.getElementsByClassName("book-popup")[0];
+        let overlay = document.getElementsByClassName("overlay")[0];
+        let clsPopup= document.getElementById("cls-book-popup")
+        for (let i = 0; i < bookBtn.length; i++) {
+            bookBtn[i].addEventListener("click", function () {
+                bookPopup.style.display = "block";
+                overlay.style.display = "block";
+            });
+        }
+        clsPopup.addEventListener("click", function(){
+            bookPopup.style.display = "none";
+            overlay.style.display = "none";
+        })
+    </script>

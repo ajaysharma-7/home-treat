@@ -1,0 +1,43 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".bannerSwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+    var swiper = new Swiper('.testiSwiper', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // when window width is <= 499px
+            768: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 30
+            },
+            // when window width is <= 999px
+            1200: {
+                slidesPerView: 2,
+                spaceBetweenSlides: 40
+            }
+        },
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-item-icon');
+            answer.classList.toggle('show');
+            icon.textContent = answer.classList.contains('show') ? '-' : '+';
+        });
+    });
+
+
+</script>

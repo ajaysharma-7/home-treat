@@ -1,0 +1,60 @@
+<div class="desktop-header">
+    <div class="container">
+        <div class="row  align-items-center">
+            <div class="col-2">
+                <div class="header-logo">
+                  <a href="/"><img src="/media/icon/logo-header.png" alt=""/>
+                  </a>  
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="header-link">
+                    <ul>
+                    <a href="/"><li>Home</li></a>  
+                    <a href="/service"><li>Service</li></a> 
+                    <a href="/about-us"><li>About-us</li></a> 
+                        <a href="/contact-us"><li>Contact-us</li></a>
+                    </ul>
+                    <a href="/login"><button class="btn-standar">Are you a nurse ?</button></a>
+                    <button class="btn-book"><i class="fa-solid fa-phone-volume me-2"></i> Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-header">
+    <div class="header-logo">
+      <a href=""><img src="/media/icon/logo-header.png" alt="Home Care Logo"></a>  
+    </div>
+    <div class="hamburger-menu">
+        <i class="fa fa-bars"></i>
+    </div>
+</div>
+
+<div class="slide-menu" id="slideMenu">
+    <div class="close-menu" id="closeMenu">
+        <i class="fa fa-times"></i>
+    </div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/service">Service</a></li>
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="/login">Are you a nurse?</a></li>
+        <li><button class="btn-book"><i class="fa-solid fa-phone-volume me-2"></i> Book Now</button></li>
+    </ul>
+</div>
+
+<script>
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const slideMenu = document.getElementById('slideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+
+    hamburgerMenu.addEventListener('click', () => {
+        slideMenu.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        slideMenu.classList.remove('open');
+    });
+</script>

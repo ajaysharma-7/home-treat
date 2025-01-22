@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <%- include('../partials/headlink.ejs') %>
+</head>
+
+<body>
+    <%- include('../partials/adminuserprofileheader.ejs') %>
+
+        <div class="profile-page">
+            <div class="profile-banner"></div>
+            <div class="user-update-info">
+                <h4>Update Your Profile...!</h4>
+                <form method="post">
+                    <div class="row">
+                        <!-- Name -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1"><span>*</span>Name</label>
+                            <input type="text" name="username" class="form-control" placeholder="Please Enter Your Name"
+                                value="<%= user.name %>" required>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1"><span>*</span>Mobile Number</label>
+                            <input type="number" name="mobile" class="form-control"
+                                placeholder="Please Enter Your Mobile Number" value="<%= user.mobile %>" required>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1">Gender</label>
+                            <select class="form-select" name="gender" ">
+                            <option value="" <%= user.gender === "" ? " selected" : "" %>>Select</option>
+                                <option value="Male" <%=user.gender==="Male" ? "selected" : "" %>>Male</option>
+                                <option value="Female" <%=user.gender==="Female" ? "selected" : "" %>>Female</option>
+                            </select>
+                        </div>
+
+                        <!-- Degree Selection -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1"><span>*</span>What's Degree you Have?</label>
+                            <select class="form-select" name="degree" required>
+                                <option value="" <%=user.degree==="" ? "selected" : "" %>>Select</option>
+                                <option value="BSC Nursing" <%=user.degree==="BSC Nursing" ? "selected" : "" %>>BSC
+                                    Nursing</option>
+                                <option value="GNM" <%=user.degree==="GNM" ? "selected" : "" %>>GNM</option>
+                            </select>
+                        </div>
+
+                        <!-- Currently Working -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1">Are you Currently Working?</label>
+                            <select class="form-select" name="currently_working">
+                                <option value="" <%=user.working==="" ? "selected" : "" %>>Select</option>
+                                <option value="Yes" <%=user.working==="Yes" ? "selected" : "" %>>Yes</option>
+                                <option value="No" <%=user.working==="No" ? "selected" : "" %>>No</option>
+                            </select>
+                        </div>
+
+
+
+                        <!-- Registration Number -->
+                        <div class="col-lg-12 col-xl-4 mb-3">
+                            <label class="mb-1">Registration Number</label>
+                            <input type="text" name="registernumber" class="form-control"
+                                placeholder="Please Enter Registration Number" value="<%= user.registrationnumber%>">
+                        </div>
+
+                        <!-- Address -->
+                        <div class="col-12 mb-3">
+                            <label class="mb-1"><span>*</span>Address</label>
+                            <input type="text" name="address" class="form-control"
+                                placeholder="Please Enter Your Address" value="<%= user.address1%>" required>
+                        </div>
+
+                        <!-- Profile Image Upload
+                    <div class="col-4 mb-3">
+                        <label class="mb-1">Upload Profile Image</label>
+                        <input type="file" name="userimg" class="form-control">
+                    </div>
+
+                    Registration Document Upload
+                    <div class="col-4 mb-3">
+                        <label class="mb-1">Upload Registration Document</label>
+                        <input type="file" name="registrationimg" class="form-control">
+                    </div> -->
+                    </div>
+                    <button class="main-btn" type="submit">Update Your Profile</button>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

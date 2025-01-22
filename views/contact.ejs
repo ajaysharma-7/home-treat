@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/headlink.ejs') %>
+</head>
+
+<body>
+    <%- include('../partials/userheader.ejs') %>
+        <div class="breadcrumb">
+            <div class="breadcrumb-content">
+                <h2>Contact-Us</h2>
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Contact-Us</li>
+                </ol>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content text-center mt-5 mb-5">
+                <p>We’re here to help! Reach out to us for inquiries, consultations, or to <strong>book our home care services
+                    in
+                    Jaipur</strong>. </p>
+                <h2> Get in Touch</h2>
+                <p>Fill out the contact form on our website, and we’ll get back to you as soon as possible. Let’s
+                    discuss how we can assist you or your loved ones with <strong>the best home nursing services in Jaipur</strong> and
+                    beyond.</p>
+            </div>
+
+            <div class="contact-form-content mt-5 mb-5">
+                <div class="row">
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="contact-form-img">
+                            <img src="/media/image/contact-us-image.png" alt="">
+                        </div>
+                        <div class="contact-address">
+                            <div class="address-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, nobis?</p>
+                            </div>
+                            <div class="address-item">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <p>+91 000 000 0000 <br> +91 000 000 0000</p>
+                            </div>
+                            <div class="address-item">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                                <p>Rajababu@gamail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-8">
+                        <div class="contact-form">
+                            <h2>Contact Form</h2>
+                            <form method="post">
+                                <label>Full Name</label>
+                                <input name="userName" type="text" class="form-control mb-3" placeholder="Enter Your Name" required>
+                                <label>Mobile Number</label>
+                                <input name="userphonenumber" type="number" class="form-control mb-3" placeholder="Enter Your Mobile Number"
+                                    required>
+                                <label>Message</label>
+                                <textarea name="userMessage" class="form-control mb-3" placeholder="Enter Your Message"></textarea>
+                                <button type="submit" class="btn-standar ">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <%- include('../partials/midsection.ejs') %>
+        <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/book-popup.ejs') %>
+        <%- include('../partials/javaScript.ejs') %>
+</body>
+
+</html>
