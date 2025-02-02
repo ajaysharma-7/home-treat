@@ -12,6 +12,10 @@
     <div class="row">
         <%- include('../partials/deshboard-link.ejs') %>
         <div class="col-9">
+            <form action="/admin/alluser/search" method="get" class="mt-3 mb-2 d-flex">
+                <input type="text" name="address" placeholder="Search by Address" class="form-control w-25 me-2" />
+                <button type="submit" class="btn-book">Search</button>
+             </form>
            <div class="user-heading">
             <div class="row">
                 <div class="col-3">

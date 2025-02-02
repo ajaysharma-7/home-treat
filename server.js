@@ -10,7 +10,12 @@ mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
 app.use(session({
     secret: process.env.KEY,
     resave : false,
-    saveUninitialized : false
+    saveUninitialized : false,
+
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 2,
+
+    }
 }))
 
 
