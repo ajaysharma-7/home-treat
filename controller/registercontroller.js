@@ -65,7 +65,7 @@ exports.forgotlinksend = async (req, res) => {
                 to: email,
                 subject: "Change Password Link form Home Care",
                 text: "Hello world?",
-                html: `<a href= "http://127.0.0.1:5000/forgot-password/${emailValidate._id}" >Change Password</a>`,
+                html: `<a href= "https://hometreat.in/forgot-password/${emailValidate._id}" >Change Password</a>`,
             });
             res.render("forgotpasswordemail.ejs", { message: "Change Password Link send your Email" })
 
@@ -131,8 +131,8 @@ exports.createuser = async (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: "testajaysharma@gmail.com",
-                pass: "mzunuwbrufuplcgn",
+                user: "hometreat.in@gmail.com",
+                pass: "utibuxlgqtwynedg",
             },
         });
         const info = await transporter.sendMail({
@@ -140,7 +140,7 @@ exports.createuser = async (req, res) => {
             to: email,
             subject: "Email verification mail form Home Care",
             text: "Hello world?",
-            html: `<a href= "http://127.0.0.1:5000/emailverify/${newUser._id}" >click to verify</a>`,
+            html: `<a href= "https://hometreat.in/emailverify/${newUser._id}" >click to verify</a>`,
         });
 
         res.render("register.ejs", { message: "Successfully Account has been Created. Please Check your email to verify " });
