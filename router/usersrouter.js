@@ -24,7 +24,9 @@ router.get("/",pagecontroller.homepage)
 router.get("/about-us",pagecontroller.aboutuspage)
 router.get("/contact-us",pagecontroller.contantpage)
 
-router.get("/service",pagecontroller.servicepage)
+router.get("/home-care-service",pagecontroller.servicepage)
+router.get("/nurse-on-call",pagecontroller.nurseoncallpage)
+router.get("/doctor-at-home",pagecontroller.DoctoratHomepage)
 
 router.post("/booknow", pagecontroller.booknowform)
 router.get("/thankyou-message", pagecontroller.thankyou)

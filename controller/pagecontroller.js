@@ -35,6 +35,27 @@ exports.servicepage = (req, res) => {
     }
 
 }
+exports.nurseoncallpage = (req, res) => {
+    try {
+        res.render("nurseoncall.ejs")
+
+    } catch (error) {
+        console.log(error.message)
+
+    }
+
+    
+}
+exports.DoctoratHomepage = (req, res) => {
+    try {
+        res.render("DoctoratHome.ejs")
+
+    } catch (error) {
+        console.log(error.message)
+
+    }
+
+}
 exports.thankyou = (req, res) => {
     try {
         res.render("thankyoumessage.ejs")

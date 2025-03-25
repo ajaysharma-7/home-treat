@@ -56,12 +56,12 @@ exports.forgotlinksend = async (req, res) => {
                 port: 587,
                 secure: false,
                 auth: {
-                    user: "testajaysharma@gmail.com",
-                    pass: "mzunuwbrufuplcgn",
+                    user: "hometreat.in@gmail.com",
+                    pass: "utibuxlgqtwynedg",
                 },
             });
             const info = await transporter.sendMail({
-                from: 'testajaysharma@gmail.com',
+                from: 'hometreat.in@gmail.com',
                 to: email,
                 subject: "Change Password Link form Home Care",
                 text: "Hello world?",
@@ -136,7 +136,7 @@ exports.createuser = async (req, res) => {
             },
         });
         const info = await transporter.sendMail({
-            from: 'testajaysharma@gmail.com',
+            from: 'hometreat.in@gmail.com',
             to: email,
             subject: "Email verification mail form Home Care",
             text: "Hello world?",

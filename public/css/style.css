@@ -150,27 +150,97 @@ span#cls-book-popup {
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
+    position: relative;
 }
 
 .header-link ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     list-style: none;
     gap: 50px;
+    padding: 0;
     margin: 0;
+}
+
+.header-link ul li {
+    position: relative;
+    padding: 10px 15px;
 }
 
 .header-link ul a {
     text-decoration: none;
     color: #000;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
 }
 
-.user-header-info {
+.header-link ul a:hover {
+    color: #0f4e9a;
+}
+
+/* Dropdown menu styles */
+.header-link ul .dropdown {
+    position: relative;
+}
+
+.header-link ul .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    width: 250px;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.header-link ul .dropdown-menu li {
+    padding: 0;
+    white-space: nowrap;
+}
+
+.header-link ul .dropdown-menu li a {
+    text-decoration: none;
+    color: black;
     display: flex;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
     align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    gap: 10px;
+}
+ul.dropdown-menu a img {
+    width: 25px;
+}
+.header-link ul .dropdown-menu li a:hover {
+    background: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.header-link ul .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .header-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-link ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-link ul .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+    }
 }
 
 .mobile-header {
@@ -884,7 +954,14 @@ span.faq-item-icon {
 .service-content h2 {
     font-weight: 300;
 }
-
+.service-content ul{
+    list-style: none;
+    padding: 0;
+}
+.service-link{
+    text-decoration: none;
+    color: #000;
+}
 /* General Footer Styling */
 .desktop-footer {
     background: linear-gradient(135deg, #0f4e9a, #2176b7, #0f4e9a);
